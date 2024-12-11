@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>MentalArthmetic</title>
+    <title>Multiply with Eleven</title>
     <style>
         body {
             margin: 0;
@@ -39,7 +36,7 @@
         }
         .left-nav a{
             text-decoration: none;
-            font-weight: bold;
+            font-weight: b;
             color: #333;  
             position: relative;
             transition: 200ms; 
@@ -78,73 +75,6 @@
         .right-nav img:hover{
             transform: scale(1.2);
         }
-        .heading h1{
-            font-family: 'Azeret+Mono', sans-serif;
-            text-transform: capitalize;
-            font-weight: 700;
-            font-style: italic;
-            color: #EEEEEE;
-            text-size-adjust: 400%;
-            text-align: center;
-            margin-top: 6rem;
-        }
-        .card-container{
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 5%;
-            justify-content: center;
-            gap: 10rem;
-        }
-        .card{
-            background-color: #393E46;
-            height: 400px;
-            width: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8rem;
-            position: relative;
-            transition: 100ms;
-        }
-        .card-container a,p{
-            text-decoration: none;
-            color: #EEEEEE;
-        }
-        .card p{
-            padding-top: 3rem;
-        }
-        #practice ::after{
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -90;
-            background-color: #d8a54e;
-            border-radius: 8.15rem;
-            transition: 200ms;
-        }
-        #learn::after{
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -90;
-            background-color: rgb(80, 64, 160);
-            border-radius: 8rem;
-            transition: 200ms;
-        }
-        
-        .card:hover{
-            scale: 120%;
-            transition: 150ms;
-        }
         .more-icon {
             position: relative;
         }
@@ -180,22 +110,59 @@
         .dropdown-menu:hover {
             display: block;
         }
-        @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
-                gap: 2rem;
+        .heading{
+            padding-top: 6rem;
+            transform: scale(1.5);
+            background: linear-gradient(90deg, rgb(141, 121, 238), rgb(130, 107, 244),rgb(151, 80, 199), rgb(205, 117, 232),rgb(120, 95, 243),rgb(141, 121, 238));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% auto;
+            animation: gradientAnimation 50s linear infinite;
+            text-align: center;
+        }
+        @keyframes gradientAnimation{
+            0%{
+                background-position: 400% 50%;
             }
-            .card {
-                width: 90%;
-            }
-            .navbar {
-                flex-wrap: wrap;
-                padding: 1rem;
-                margin-bottom: 4rem;
+            100%{
+                background-position: 0% 50%;
             }
         }
+        .container{
+            
+            margin: 0%;
+        }
 
-    </style>
+        .sumlessthan10, .sumorethan10{
+            
+            width: 50vw;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            padding-left: 20vw;
+            padding-top: 40px;
+            padding-bottom: 50px;
+            margin-bottom: 2rem;
+            transform: scale(1.5);
+        }
+        .sumlessthan10{
+            padding-top: 8rem;
+        }
+        .sumorethan10{
+            padding-top: 10rem;
+        }
+        .explanation-sumorethan10, .explanation-sumlessthan10{
+            background: linear-gradient(90deg, rgb(141, 121, 238), rgb(205, 117, 232));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 25px;
+            padding: 1px;
+            
+        }
+        
+        
+
+        </style>
 </head>
 <body>
     <div class="navbar">
@@ -218,25 +185,44 @@
             
         </div>
     </div>
+    <div class="container">
+        <div class="heading">
+            <h1>How to multiply with eleven</h1>
+        </div>
+        <div class="sumlessthan10">
 
-    <div class="heading">
-        <h1>Make your Mental Arithmetic skills Better</h1>
-    </div>
+            <div class="explanation-sumlessthan10">
+                <p>Lets take any two digit number and multiply it with 11. It probably takes more than 15 seconds to find the answer right? Well here is a
+                    trick which lets you find product of any two digit number with eleven in less than 5 seconds. <br><br><br> Take a number suppose <b>34</b>. Now the <b>
+                        first and second
+                        digits which are '3' and '4'
+                    </b> will also be <b>first and last digit</b> of the product with eleven:- <b>3_4</b><br> Now the <b>middle number</b> will be the <b>
+                        sum of
+                        those two digits
+                    </b>. In this case it is <b>3+4=7</b>. <br> So join the digits and the answer will be <b>374</b>!.
+                </p>
+            </div>
 
-    <div class="card-container">
-        <a href="{{ url_for('learn') }}">
-            <div class="card" id="learn">
-                <img src="{{ url_for('static', filename='images/learning-icon.svg') }}" alt="">
-                <p>Learn different methods to calculate faster</p>
+            <div class="video">
+                <video src="{{ url_for('static', filename='videos/sumlessthan10.mp4') }}"
+                poster="{{ url_for('static', filename='images/sumlessthan10-poster.png') }}" loop autoplay muted width="320"></video>
             </div>
-        </a>
-        <a href="{{ url_for('practice') }}">
-            <div class="card" id="practice">
-                <img src="{{ url_for('static', filename='images/thinking-icon.svg') }}" alt="">
-                <p>Practice the methods to get better</p>
+            
+        </div>
+        <div class="sumorethan10">
+
+            <div class="explanation-sumorethan10">
+                <p>Now an obvious question occurs to our minds that "What if the <b>sum of the two digits is more than 10</b>?". Well you just apply the same
+                    algorithm but beacuse sum is more than 10, the <b>one gets carried and adds to the first digit</b>.
+                </p>
             </div>
-        </a>
+
+            <div class='video'>
+                <video src="{{ url_for('static', filename='videos/sumorethan10.mp4') }}" loop autoplay muted width="320" 
+                poster="{{ url_for('static', filename='images/sumorethan10-poster.png') }}"></video>
+            </div>
+            
+        </div>
     </div>
-   
 </body>
 </html>

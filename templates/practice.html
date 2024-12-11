@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>MentalArthmetic</title>
+    <title>Practice Area</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #222831;
+            color: #EEEEEE;
         }
         .navbar{
             display: flex;
@@ -78,73 +76,6 @@
         .right-nav img:hover{
             transform: scale(1.2);
         }
-        .heading h1{
-            font-family: 'Azeret+Mono', sans-serif;
-            text-transform: capitalize;
-            font-weight: 700;
-            font-style: italic;
-            color: #EEEEEE;
-            text-size-adjust: 400%;
-            text-align: center;
-            margin-top: 6rem;
-        }
-        .card-container{
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 5%;
-            justify-content: center;
-            gap: 10rem;
-        }
-        .card{
-            background-color: #393E46;
-            height: 400px;
-            width: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8rem;
-            position: relative;
-            transition: 100ms;
-        }
-        .card-container a,p{
-            text-decoration: none;
-            color: #EEEEEE;
-        }
-        .card p{
-            padding-top: 3rem;
-        }
-        #practice ::after{
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -90;
-            background-color: #d8a54e;
-            border-radius: 8.15rem;
-            transition: 200ms;
-        }
-        #learn::after{
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -90;
-            background-color: rgb(80, 64, 160);
-            border-radius: 8rem;
-            transition: 200ms;
-        }
-        
-        .card:hover{
-            scale: 120%;
-            transition: 150ms;
-        }
         .more-icon {
             position: relative;
         }
@@ -180,21 +111,34 @@
         .dropdown-menu:hover {
             display: block;
         }
-        @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .card {
-                width: 90%;
-            }
-            .navbar {
-                flex-wrap: wrap;
-                padding: 1rem;
-                margin-bottom: 4rem;
-            }
+        .practice-area {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 4rem 0;
         }
 
+        .practice-tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 100px;
+            
+            background-color: #393E46;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 300ms, transform 200ms;
+        }
+
+        .practice-tab:hover {
+            background-color: #cc9434;
+            transform: scale(1.05); 
+        }
     </style>
 </head>
 <body>
@@ -218,25 +162,9 @@
             
         </div>
     </div>
-
-    <div class="heading">
-        <h1>Make your Mental Arithmetic skills Better</h1>
+    <div class="practice-area">
+        <a href="/practice/multiply-with-eleven-practice" class="practice-tab">Practice Multiplication with 11</a>
+        <a href="/practice/square-of-numbers-ending-with-five" class="practice-tab">Practice Squaring Numbers Ending with 5</a>
     </div>
-
-    <div class="card-container">
-        <a href="{{ url_for('learn') }}">
-            <div class="card" id="learn">
-                <img src="{{ url_for('static', filename='images/learning-icon.svg') }}" alt="">
-                <p>Learn different methods to calculate faster</p>
-            </div>
-        </a>
-        <a href="{{ url_for('practice') }}">
-            <div class="card" id="practice">
-                <img src="{{ url_for('static', filename='images/thinking-icon.svg') }}" alt="">
-                <p>Practice the methods to get better</p>
-            </div>
-        </a>
-    </div>
-   
 </body>
 </html>

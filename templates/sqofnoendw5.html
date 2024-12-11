@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>MentalArthmetic</title>
+    <title>Document</title>
     <style>
         body {
             margin: 0;
@@ -78,73 +75,6 @@
         .right-nav img:hover{
             transform: scale(1.2);
         }
-        .heading h1{
-            font-family: 'Azeret+Mono', sans-serif;
-            text-transform: capitalize;
-            font-weight: 700;
-            font-style: italic;
-            color: #EEEEEE;
-            text-size-adjust: 400%;
-            text-align: center;
-            margin-top: 6rem;
-        }
-        .card-container{
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 5%;
-            justify-content: center;
-            gap: 10rem;
-        }
-        .card{
-            background-color: #393E46;
-            height: 400px;
-            width: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8rem;
-            position: relative;
-            transition: 100ms;
-        }
-        .card-container a,p{
-            text-decoration: none;
-            color: #EEEEEE;
-        }
-        .card p{
-            padding-top: 3rem;
-        }
-        #practice ::after{
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -90;
-            background-color: #d8a54e;
-            border-radius: 8.15rem;
-            transition: 200ms;
-        }
-        #learn::after{
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -90;
-            background-color: rgb(80, 64, 160);
-            border-radius: 8rem;
-            transition: 200ms;
-        }
-        
-        .card:hover{
-            scale: 120%;
-            transition: 150ms;
-        }
         .more-icon {
             position: relative;
         }
@@ -180,22 +110,61 @@
         .dropdown-menu:hover {
             display: block;
         }
-        @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
-                gap: 2rem;
+        .heading{
+            padding-top: 6rem;
+            transform: scale(1.5);
+            background: linear-gradient(90deg, rgb(141, 121, 238), rgb(130, 107, 244),rgb(151, 80, 199), rgb(205, 117, 232),rgb(120, 95, 243),rgb(141, 121, 238));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% auto;
+            animation: gradientAnimation 50s linear infinite;
+            text-align: center;
+            margin: 0%;
+        }
+        @keyframes gradientAnimation{
+            0%{
+                background-position: 400% 50%;
             }
-            .card {
-                width: 90%;
-            }
-            .navbar {
-                flex-wrap: wrap;
-                padding: 1rem;
-                margin-bottom: 4rem;
+            100%{
+                background-position: 0% 50%;
             }
         }
-
-    </style>
+        .container{
+            margin: 0%;
+        }
+        .sqofnoendw5-exp{
+            width: 50vw;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            padding-left: 20vw;
+            padding-top: 12rem;
+            margin-top: 0%;
+            gap: 5%;
+            transform: scale(1.5);
+            top: 90%;
+        }
+        .video{
+            display: grid;
+            width: 34%;
+            gap: 2%;
+        }
+        .container{
+            display: grid;
+        }
+        .container ul{
+            list-style: none;
+        }
+        .explanation-square{
+            background: linear-gradient(90deg, rgb(141, 121, 238), rgb(205, 117, 232));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 25px;
+            padding: 1px;
+        }
+        </style>
 </head>
 <body>
     <div class="navbar">
@@ -218,25 +187,46 @@
             
         </div>
     </div>
+</div>
+<div class="heading">
+    <h1>How to sqaure numbers that end with five</h1>
+</div>
+<div class="container">
+    <div class="sqofnoendw5-exp">
 
-    <div class="heading">
-        <h1>Make your Mental Arithmetic skills Better</h1>
-    </div>
+        <div class="explanation-square">
+            <p>
+                To square any number ending in 5, follow this simple trick! The last two digits of the product will always be <b>25</b>. 
+                The remaining first digits can be found by multiplying the first digits of the original number by their next consecutive number.
+            </p>
+            <p>
+                For example, lets take the number <b>75</b>:
+                <ul>
+                    <li>The last two digits are <b>25</b>.</li>
+                    <li>The first digit is <b>7</b>. Multiply it by its next consecutive number: <b>7 &times; 8 = 56</b>.</li>
+                    <li>Combine the result: <b>5625</b> is the square of 75!</li>
+                </ul>
+            </p>
+            <p>
+                Try it with <b>35</b>:
+                <ul>
+                    <li>The last two digits are <b>25</b>.</li>
+                    <li>The first digit is <b>3</b>. Multiply it by its next consecutive number: <b>3 &times; 4 = 12</b>.</li>
+                    <li>Combine the result: <b>1225</b> is the square of 35!</li>
+                </ul>
+                This works with all numbers(including more than 2 digits)
+            </p>
+        </div>
 
-    <div class="card-container">
-        <a href="{{ url_for('learn') }}">
-            <div class="card" id="learn">
-                <img src="{{ url_for('static', filename='images/learning-icon.svg') }}" alt="">
-                <p>Learn different methods to calculate faster</p>
-            </div>
-        </a>
-        <a href="{{ url_for('practice') }}">
-            <div class="card" id="practice">
-                <img src="{{ url_for('static', filename='images/thinking-icon.svg') }}" alt="">
-                <p>Practice the methods to get better</p>
-            </div>
-        </a>
-    </div>
-   
+        <div class="video">
+            <video src="{{ url_for('static', filename='videos/sqofnoendw5_2.mp4') }}"
+            poster="{{ url_for('static', filename='images/sqofnoendw5_2.png') }}" loop autoplay muted width="320"></video>
+            <video src="{{ url_for('static', filename='videos/sqofnoendw5_3.mp4') }}"
+            poster="{{ url_for('static', filename='images/sqofnoendw5_3.png') }}" loop autoplay muted width="320"></video>
+            <video src="{{ url_for('static', filename='videos/sqofnoendw5_4.mp4') }}"
+            poster="{{ url_for('static', filename='images/sqofnoendw5_4.png') }}" loop autoplay muted width="320"></video>
+        </div>
+</div>
+
 </body>
 </html>

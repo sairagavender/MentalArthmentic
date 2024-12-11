@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function generateQuestion() {
+    document.getElementById("useranswer").value = "";
     num = Math.floor((Math.random() * 100) + 1);
     const question = `${num} x 11`;
     document.querySelector("#question").textContent = `What is ${question}?`;

@@ -18,6 +18,9 @@ function generateNumbers(){
 }
 
 function generateQuestion() {
+    const answerCard = document.querySelector(".answercard");
+    answerCard.style.display = "none";
+    document.getElementById("useranswer").value = "";
     nums=generateNumbers();
     numIndex = Math.floor(Math.random() * nums.length);
     num=nums[numIndex]

@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function generateQuestion() {
+    const answerCard = document.querySelector(".answercard");
+    answerCard.style.display = "none";
     document.getElementById("useranswer").value = "";
     num = Math.floor((Math.random() * 100) + 1);
     const question = `${num} x 11`;

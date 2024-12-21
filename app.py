@@ -34,5 +34,9 @@ def sqofnoendw5prac():
 def myview():
     return render_template('myview.html')
 
+@app.route('/.well-known/discord')
+def discordverification():
+    return render_template('discver.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
